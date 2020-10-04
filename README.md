@@ -23,7 +23,6 @@ It’s a classic old board game that’s a cross between checkers and tic-tac-to
    ```
 
 ## How to play
-#
 Select board size by rows and columns:
 #
 ![selectBoardSize](doc/selectBoardSize.png)
