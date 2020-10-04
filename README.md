@@ -3,6 +3,8 @@
 ## Introduction
 
 It’s a classic old board game that’s a cross between checkers and tic-tac-toe. It’s a two-player game, with each player trying to get 4-in-a-row of their color on the gameboard.
+![start3](doc/start3.png)
+
 
 ## Installation and how to run
 1. require python 3
