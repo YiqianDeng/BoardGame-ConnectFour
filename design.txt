@@ -1,0 +1,116 @@
+'''
+    CS 5001
+    SPRING 2020
+    PROJECT
+    YIQIAN DENG
+
+    design.txt
+'''
+
+Level of Game:
+    - All features for level A and below level A
+    - Part of features in level A+ (remove and computer strategy)
+
+
+
+Summarize of design:
+    1.  -   Class:  Player
+
+            Attributes: name (string)
+                        color (string)
+                        in_data (integer)
+                        identity (string)
+
+            Methods:    constructor
+
+
+        -   Class:  Board
+
+            Attributes: bg_color (string)
+                        dimension (tuple)
+                        height (integer)
+                        wide (integer)
+                        adjust_height (integer)
+                        adjust_wide (integer)
+                        screen (turtle object)
+
+            Methods:    constructor
+                        draw_board
+
+
+        -   Class:  Game
+
+            Attributes: ply_1 (player object)
+                        ply_2 (player object)
+                        winner (player object)
+                        first (player object)
+                        last (player object)
+                        curr_player (player object)
+                        board (board object)
+                        signal_light (turtle object)
+                        signal_text (turtle object)
+                        info_box (turtle object)
+                        piece (nested list of turtle object)
+                        data (nested list of integer)
+                        score (nested list)
+                        scorefile (string)
+                        column (integer)
+                        row (integer)
+                        round (integer)
+                        y_remove (float)
+                        y_insert (float)
+                        unit_x (int)
+
+            Methods:    constructor
+                        draw_piece
+                        draw_button
+                        draw_sign
+                        print_info
+                        display_signal
+                        place_piece
+                        draw_score
+                        draw_end_page
+                        end_game
+                        ai_generate
+                        click_button
+                        check_result
+                        score_init
+                        update_score
+                        play
+
+
+
+    2.  Data Structure used:    Integers
+                                Floats
+                                Strings
+                                Boolean
+                                Lists
+                                Tuple
+                                Files
+
+
+    3.  Non class functions defined:    create_turtle()
+                                        who_turn()
+
+
+
+Approach to testing:
+    Basically I have test all attributes and methods for Player and Board.
+    Also tested all attributes and as much as possible methods for Game.
+    There are few graph and algorithm methods cannot be test in unittest, thus, I
+    played as many as times with corner cases to make sure the game worked as expected.
+    Corner cases include but not limited to following:
+        1. create 3 * 4 board to test if the board full.
+        2. default 6 * 7 board to test win vertical, horizontal, and 2 directions
+            of diagonals.
+        3. try to remove my pieces to make sure that I could only remove
+            opponent's piece.
+        4. try add piece to a column when this column is already full.
+        5. try corner cases in both human vs computer and human vs human round
+            several times to make sure it work well on both.
+        6. create 12 * 18 board.
+        7. test if no winner or with winner, score update successful.
+
+
+    
+                    
